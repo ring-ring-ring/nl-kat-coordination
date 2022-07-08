@@ -7,7 +7,7 @@ OpenKAT scant, verzamelt, analyseert en rapporteert in een permanent proces:
 
 image::https://user-images.githubusercontent.com/76487016/172068892-d8bb4552-5d4e-42d5-bd94-d1fb1b6d18b7.png[Flow van OpenKAT,640,]
 
-Wil je meer weten, lees dan de uitgebreide documentatie. Een toegankelijk startpunt is de link:https://github.com/minvws/nl-kat-coordination/wiki/Algemene-uitleg-OpenKAT-en-bijbehorende-figuren[informatiebrochure], waarin ook bovenstaand model wordt uitgelegd. Alle informatie over OpenKAT en de functionaliteit van het pakket is te vinden link:https://github.com/minvws/nl-kat-coordination/wiki[op de wiki]. 
+Wil je meer weten, lees dan de link:https://github.com/minvws/nl-kat-coordination/wiki[uitgebreide documentatie]. Een toegankelijk startpunt is de link:https://github.com/minvws/nl-kat-coordination/wiki/Algemene-uitleg-OpenKAT-en-bijbehorende-figuren[informatiebrochure], waarin ook bovenstaand model wordt uitgelegd. Alle informatie over OpenKAT en de functionaliteit van het pakket is te vinden link:https://github.com/minvws/nl-kat-coordination/wiki[op de wiki]. 
 
 OpenKAT is nog volop in ontwikkeling. Hiervoor is input welkom!
 
@@ -63,7 +63,7 @@ De tools die door OpenKAT worden aangesproken kunnen hun eigen licentie hebben, 
 
 == Plugins bouwen
 
-Het gebruik van plugins zoals boefjes (scraper), whiskers (normalizer) of bits (businessrule) die informatie uit andere tools analyseren maakt het mogelijk om systemen met een ander type licentie met OpenKAT te laten samenwerken. Plugins link:https://github.com/minvws/nl-kat-coordination/wiki/Plugins-maken:-Boefjes,-Whiskers-en-Bits[zijn eenvoudig te bouwen] en vallen onder de EU PL 1.2 licentie, voor zover je ze in de KATalogus wilt laten opnemen voor verdere verspreiding. OpenKAT als systeem kan hierdoor prima in een corporate omgeving functioneren. 
+Het gebruik van plugins zoals boefjes (scraper), whiskers (normalizer) of bits (businessrule) die informatie uit andere tools analyseren maakt het mogelijk om systemen met een ander type licentie met OpenKAT te laten samenwerken. Plugins link:https://github.com/minvws/nl-kat-coordination/wiki/Plugins-maken:-Boefjes,-Whiskers-en-Bits[zijn eenvoudig te bouwen] en vallen onder de EU PL 1.2 licentie, voor zover je ze in de KAT-alogus wilt laten opnemen voor verdere verspreiding. OpenKAT als systeem kan hierdoor prima in een corporate omgeving functioneren. 
 
 = Meedoen!
 
@@ -121,6 +121,6 @@ De meeste documentatie in de software zelf is in het Engels geschreven. De handl
 Er een aantal opties om contact te leggen het met team van OpenKAT: 
 
 * Direct contact: meedoen@openkat.nl
-* Forum: link:https://github.com/minvws/nl-kat-coordination/discussions[Github Discussions] of de OpenKAT groep op link:https://www.linkedin.com/[Linkedin]
+* Forum: link:https://github.com/minvws/nl-kat-coordination/discussions[Github Discussions] of vraag via meedoen@openkat.nl een invite aan voor de OpenKAT groep op link:https://www.linkedin.com/[Linkedin]
 * IRC: #openkat op irc.libera.chat
 
