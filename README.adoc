@@ -100,6 +100,20 @@ Op Github tref je een development branch aan. Hiervoor kunnen pull requests voor
 
 Als je wilt dat je boefje wordt opgenomen in de KAT-alogus geldt er een aparte regeling, waar we je graag over vertellen. Stuur een mailtje naar meedoen@openkat.nl. 
 
+== Wat zijn de plannen voor de nabije toekomst? 
+
+De ontwikkelaars bij het Ministerie van VWS richten zich in eerste instantie op de rough edges en het verder compleet maken van OpenKAT. Daar horen ook packaging, deployment en verdere documentatie van het systeem bij. 
+
+Voor de verdere toekomst denken we aan de volgende features en doorontwikkeling: 
+
+* Boefjes uitbreiden
+* KAT-alogus apart aanbieden
+* Scheiding van boefjes en normalizers, sandboxed maken
+* Rapportage engine flexibeler maken
+* Communicatie engine afmaken (staat op laag pitje)
+
+Bijdragen zijn welkom, neem vooral contact op via meedoen@openkat.nl of stuur je PR in via Github.
+
 == Ik run Arch/NetBSD/OpenVMS of iets anders leuks, hoe kan ik zorgen dat OpenKAT het ook op mijn systeem doet? 
 
 OpenKAT gaat er vanuit dat je ubuntu of debian gebruikt, maar de community manager kreeg het onder Mac OS X zo aan de gang. Probeer het dus gerust, en help ons vooral met fixes en documentatie voor de installatie op je favoriete systeem!
