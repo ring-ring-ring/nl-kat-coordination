@@ -3,6 +3,16 @@
 
 OpenKAT heeft als doel het monitoren, registreren en analyseren van de status van informatiesystemen. OpenKAT scant netwerken, analyseert kwetsbaarheden en maakt toegankelijke rapporten. Het integreert de meest gebruikte netwerktools en scansoftware in een modulair framework, heeft toegang tot externe databases zoals shodan en combineert de informatie uit al deze bronnen in overzichtelijke rapportages.
 
+== Waarom OpenKAT? 
+
+OpenKAT is bedacht voor de monitoring van systemen tijdens de vaccinatiecampagne, waarin een groeiende hoeveelheid systemen en nieuwe functies, verdeeld over een een veelheid aan organisaties permanent moest worden bewaakt. 
+
+OpenKAT combineert verschillende bronnen en tools, doet automatisch scans en maakt het mogelijk om een brede analyse te doen en bevindingen te verzamelen. Dit alles in een schaalbaar en uitbreidbaar framework dat automatisch grotere systemen kan monitoren. 
+
+Het pakket is nuttig als je een complex of omvangrijk systeem wilt monitoren en wilt weten of hierin bekende kwetsbaarheden of configuratiefouten te vinden zijn. Het uitgangspunt is dat veel van de grote beveiligingsincidenten worden veroorzaakt door kleine fouten en bekende kwetsbaarheden. 
+
+== Hoe werkt het?
+
 OpenKAT scant, verzamelt, analyseert en rapporteert in een permanent proces: 
 
 image::https://user-images.githubusercontent.com/76487016/172068892-d8bb4552-5d4e-42d5-bd94-d1fb1b6d18b7.png[Flow van OpenKAT,640,]
@@ -10,6 +20,62 @@ image::https://user-images.githubusercontent.com/76487016/172068892-d8bb4552-5d4
 Wil je meer weten, lees dan de uitgebreide documentatie. Een toegankelijk startpunt is de link:https://github.com/minvws/nl-kat-coordination/wiki/Algemene-uitleg-OpenKAT-en-bijbehorende-figuren[informatiebrochure], waarin ook bovenstaand model wordt uitgelegd. Alle informatie over OpenKAT en de functionaliteit van het pakket is te vinden link:https://github.com/minvws/nl-kat-coordination/wiki[op de wiki]. 
 
 OpenKAT is nog volop in ontwikkeling. Hiervoor is input welkom!
+
+== Hoe ontstond OpenKAT? 
+
+Het Ministerie van VWS heeft de 'Kwetsbaarheden Analyse Tool' gebouwd om de eigen infrastructuur en het stelsel rondom CoronaCheck te monitoren. OpenKAT is door eigen programmeurs van het ministerie gebouwd. 
+
+De dynamiek van de vaccinatiecampagne leverde voor de informatiebeveiliging een aantal kwesties op:
+
+* Schaal: 
+
+Bij de vaccinatiecampagne zijn enorm veel organisaties betrokken waarmee informatie wordt uitgewisseld. 
+
+* Dynamiek: 
+
+COVID houdt zich niet aan een net en planbaar schema maar vroeg zeker in de eerste fase om directe actie. 's Avonds deed de minister een belofte in het parlement, na een nacht doorwerken werden de volgende ochtend weer nieuwe systemen of functies uitgerold. 
+
+* Focus: 
+
+De grootste veiligheidsincidenten in dit soort systemen worden veroorzaakt door bekende kwetsbaarheden, configuratiefouten en slordigheid. Ook foutjes bij een update of een nieuwe uitrol na de initiele pentest willen we kunnen vinden. 
+
+=== Hoe lost OpenKAT deze kwesties op? 
+
+Toen OpenKAT werd bedacht was vooral duidelijk dat er monitoring moest komen en wel geautomatiseerd, flexibel en herleidbaar. De opbouw van het systeem geeft een indicatie van de mogelijkheden: 
+
+* Framework: 
+
+OpenKAT is een framework dat ingezet kan worden voor informatieverzameling, opslag en verwerking. Het is zo flexibel dat 'de stukjes er bijna uitvallen': zo goed als alles wat gescheiden kan worden is dat ook. Zo kan er op nieuwe ontwikkelingen worden gereageerd en konden nieuwe functies worden opgenomen. 
+
+* Plugins voor informatieverzameling: 
+
+De 'Boefjes' halen informatie binnen: het zijn plugins varierend van een klein scriptje of scraper tot een externe tool die in een eigen container draait. Is er een nieuw issue dat nog niet wordt gedekt, dan maak je er een boefje voor dat de informatie ophaalt. 
+
+* Forensische borging: 
+
+De ruwe data wordt opgeslagen met een hash en een externe timestamp. Hierdoor is terug te halen welke informatie op welk moment is opgeslagen. Komen er nieuwe kwetsbaarheden voor een bepaalde software versie? Dan is die al in het systeem bekend en hoeft er niet apart gescand te worden. 
+
+* Datamodel: 
+
+Om alle inputs te verwerken wordt data omgezet in objecten, die passen in een vooraf uitgewerkt datamodel. Zo is een IP adres een object, dat via verschillende routes kan worden gevonden en logische relaties heeft met andere objecten. Het datamodel is uitbreidbaar. 
+
+* Automatisch scannen: 
+
+Het pakket zoekt zelf naar informatie, aan de hand van de logische relaties in het datamodel. De resultaten van de scans leiden weer tot nieuwe acties, net als het verstrijken van tijd leidt tot herhaling van eerdere scans. 
+
+* Vrijwaringen per gebruiker en organisatie: 
+
+De intensiteit van een scan wordt bepaald aan de hand van de beschikbare vrijwaring. OpenKAT kan genoeg tools aanspreken om een systeem zwaar te belasten en daarvoor is toestemming nodig. Is die er niet, dan kan altijd via 'derden' informatie worden verzameld zoals met shodan en vergelijkbare databases. 
+
+* Bevindingen en rapportages: 
+
+De resultaten van de analyse zijn eenvoudig te bekijken, per gebruiker, organisatie, object etc. Rapportages zijn beschikbaar voor veelvoorkomende vragen en eenvoudig uitbreidbaar. 
+
+== Wat is de toekomst van OpenKAT?
+
+Het pakket is uitbreidbaar en bedacht om door te ontwikkelen. Zo zijn er bijvoorbeeld plannen om OpenKAT in te zetten als compliance tool ter ondersteuning van een 'Information Security Management System'. Dit vraagt met name veel werk in het doordenken van het datamodel met alle objecten, het bouwen van boefjes en analysetools, want het framework staat er al. 
+
+Daar zit ook de crux: OpenKAT is beschikbaar en uitbreidbaar, maar die uitbreidingen kosten net als het werk tot nu toe denkkracht, tijd en energie. Daarom is het systeem onder de EU PL 1.2 vrijgegeven en is er een actieve community die meekijkt en meewerkt bij de doorontwikkeling van OpenKAT. Daarbij is iedereen welkom! 
 
 == Welke code bevat OpenKAT? 
 
@@ -52,6 +118,8 @@ OpenKAT is gebouwd door het Ministerie van VWS, Directie Informatiebeleid, progr
 == Wat levert dit op voor andere open source projecten? 
 
 OpenKAT en onderdelen ervan kunnen onder de voorwaarden van de EU PL 1.2 licentie worden toegepast in andere projecten. Zo maakt de frontend gebruik van Manon-Open, een framework waarin content en styling zijn gescheiden en dat goed bruikbaar is voor andere projecten. Daarnaast is het mogelijk om OpenKAT te integreren in andere systemen. Het uitgangspunt is dat het als framework functioneert en aanpasbaar is aan verschillende situaties. 
+
+
 
 = Licenties
 
